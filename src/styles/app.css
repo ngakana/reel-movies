@@ -1,0 +1,93 @@
+@media (max-width: 599px) {
+  nav {
+    position: fixed;
+    bottom: 0%;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -2px 20px #4f555f48;
+    background-color: whitesmoke;
+  }
+
+  .brand-logo {
+    display: none;
+  }
+
+  .nav-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav-links div a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links div a span {
+    display: none;
+  }
+  .nav-links div a svg {
+    width: 50%;
+  }
+}
+@media (min-width: 600px) {
+  nav {
+    width: 100%;
+    height: 67px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #4f555f;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  .nav-links div a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    padding: 0.2rem 0.4rem 0.15rem 0;
+    padding: 0 1rem;
+    color: whitesmoke;
+  }
+  .nav-links div a:active {
+    border-bottom: 2px solid whitesmoke;
+  }
+  .nav-links div a svg {
+    display: none;
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  background-color: #333e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=app.css.map */

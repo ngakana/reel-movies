@@ -1,0 +1,19 @@
+@use "components";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  background-color: #333e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
