@@ -1,5 +1,25 @@
+import { useEffect, useContext } from "react";
+import axios from "axios";
+
+import MovieCard from "../components/movieCard";
+import { MoviesContext } from "../contexts/MoviesContext";
+
 function Movies() {
-  return <h1>Movies page</h1>;
+  const { movies, getMovies } = useContext(MoviesContext);
+
+  useEffect(() => {
+    getMovies();
+  }, []);
+
+  return (
+    <div className="movies-page">
+      <ul className="movie-list">
+        {movies.map((movie) => {
+          return <MovieCard movie={movie} />;
+        })}
+      </ul>
+    </div>
+  );
 }
 
 export default Movies;
