@@ -7,12 +7,13 @@ const APIkey = process.env.REACT_APP_API_KEY;
 
 export const MoviesProvider = (props) => {
   const [movies, setMovies] = useState(() => {
-    const data = localStorage.getItem("movies");
-    return data == !null ? JSON.parse(data) : [];
+    let data = localStorage.getItem("movies");
+    data = JSON.parse(data);
+    return data !== null ? data : [];
   });
 
   const getMovies = async () => {
-    if (movies != []) {
+    if (movies.length === 0) {
       try {
         const res = await axios({
           method: "get",
@@ -35,7 +36,7 @@ export const MoviesProvider = (props) => {
         }
       }
     } else {
-      return [];
+      return;
     }
   };
 
